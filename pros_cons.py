@@ -2,14 +2,14 @@
 import streamlit as st
 
 def pros_cons_page():
-    st.title("📝 Pros & Cons of the System")
-    st.write("""
+    st.markdown("""
     **Pros:**  
-    - Fast Matching
-    - Personalized Suggestions
-    - Resume Skill Extraction
+    - Fast skill-based job matching  
+    - Easy to customize and expand  
+    - Detects skills from resumes  
 
     **Cons:**  
-    - Dependent on Resume Quality
-    - Might miss soft skills
+    - Depends on dataset quality  
+    - Simple TF-IDF scoring  
+    - Limited to uploaded resume content  
     """)
