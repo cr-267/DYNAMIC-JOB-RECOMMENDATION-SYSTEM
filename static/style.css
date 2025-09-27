@@ -1,0 +1,149 @@
+/* style.css */
+
+html, body, [class*="css"] {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #101014;
+    color: #f0f0f0;
+}
+
+/* Fixed Header */
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #1a1a1a;
+    color: #ff4b5c;
+    text-align: center;
+    padding: 1.2rem 0;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    z-index: 10000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    pointer-events: none;
+}
+
+/* Hide Streamlit default header */
+.stApp > header {
+    visibility: hidden;
+}
+
+/* Main Content */
+.main-content {
+    padding-top: 6.5rem;
+    padding-bottom: 5.5rem;
+}
+
+/* Sidebar container */
+section[data-testid="stSidebar"] {
+    background-color: transparent !important;
+}
+
+/* Scrollable sidebar */
+section[data-testid="stSidebar"] > div:first-child {
+    position: fixed;
+    top: 6.5rem;
+    bottom: 4.5rem;
+    height: auto;
+    overflow-y: auto;
+    width: inherit;
+    background-color: #1e1e1e;
+    z-index: 9;
+    padding: 1.5rem;
+    margin: 0.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+
+/* Buttons */
+.stButton>button {
+    background: linear-gradient(90deg, #ff4b5c, #ff1e3c);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 0.6rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.stButton>button:hover {
+    background: linear-gradient(90deg, #ff1e3c, #ff4b5c);
+    transform: scale(1.05);
+    color: white !important;
+}
+
+/* Form Fields */
+.stTextInput > div, .stSelectbox > div, .stFileUploader > div {
+    background-color: #2b2b2b;
+    border-radius: 12px;
+    padding: 0.5rem;
+}
+
+.stTextInput input, .stSelectbox select, .stFileUploader label {
+    color: #fff !important;
+}
+
+/* Content Cards */
+.section, .job-card {
+    background-color: #1a1a1d;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    margin-bottom: 1.5rem;
+}
+
+.job-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.job-info {
+    font-size: 0.95rem;
+    color: #bbb;
+    margin-bottom: 0.8rem;
+}
+
+.profile-summary, .explanation {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin-top: 0.5rem;
+}
+
+.scrollable-container {
+    padding-top: 1rem;
+    max-height: 75vh;
+    overflow-y: auto;
+    padding-right: 1rem;
+}
+
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #1a1a1a;
+    text-align: center;
+    padding: 1rem 0;
+    border-top: 1px solid #333;
+    color: #aaa;
+    font-size: 0.9rem;
+    z-index: 10000;
+    pointer-events: none;
+}
+
+.footer a {
+    color: #ff4b5c;
+    font-weight: bold;
+    text-decoration: none;
+    pointer-events: auto;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
