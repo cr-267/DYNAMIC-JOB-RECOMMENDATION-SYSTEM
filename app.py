@@ -10,6 +10,37 @@ from pros_cons import pros_cons_page
 # ─── 1) Page Config ───────────────────────────────────────────────────────
 st.set_page_config(page_title="Job Recommender", layout="wide", initial_sidebar_state="expanded")
 
+# ─── Inline CSS for Fixed Header and Main Content ─────────────────────────
+st.markdown("""
+    <style>
+    .fixed-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        background: linear-gradient(90deg, #232526, #414345);
+        color: #fff;
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 1rem 2rem 1rem 2rem;
+        z-index: 9999;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        text-align: left;
+    }
+    .main-content {
+        margin-top: 80px;
+    }
+    .footer {
+        margin-top: 40px;
+        color: #888;
+        text-align: center;
+        font-size: 0.95rem;
+        padding-bottom: 1rem;
+    }
+    </style>
+""", unsafe_allow_html=True)
+
+# If you want to keep your external CSS for other styles, you can still load it:
 with open('static/style.css') as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
